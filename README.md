@@ -1,16 +1,42 @@
-# 🛍️ Customer Segmentation with E-commerce Data
+# 🛍️ Customer Segmentation Using Clustering Techniques
 
-This project clusters e-commerce customers based on their purchasing behavior using unsupervised machine learning. It helps businesses better understand customer personas and optimize marketing strategies.
+Identify distinct customer groups based on purchasing behavior to help businesses personalize marketing strategies.
 
-## 📊 Project Highlights
-- **Clustering** using KMeans
-- **EDA** with Pandas, Seaborn, and Plotly
-- **Interactive Dashboard** built with Streamlit
-- **Real-world E-commerce dataset** from UCI ML Repository
+## 🔍 Dataset
+- **Source**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/online+retail)
+- **Description**: Transaction data from a UK-based online retailer (2010–2011).
 
-## 🚀 How to Run
+## 🚀 Features
+- Upload and process `.xlsx` E-commerce datasets
+- Compute RFM metrics (Recency, Frequency, Monetary)
+- Run KMeans clustering
+- Visualize clusters using PCA and t-SNE
+- Download clustered customer segments
 
-1. Clone the repo and navigate into it:
-   ```bash
-   git clone https://github.com/your-username/customer-segmentation.git
-   cd customer-segmentation
+## 📊 Tech Stack
+- Python 🐍 (Pandas, Scikit-learn, Seaborn, Matplotlib)
+- Streamlit 🖥️ for web app
+- Excel support via OpenPyXL
+
+## 🧠 Key Steps
+
+### 1. Data Preprocessing
+- Handle missing values
+- Remove canceled orders
+- Create TotalPrice and RFM features
+
+### 2. Clustering Techniques
+- KMeans with 4 clusters
+- t-SNE & PCA for visualization
+
+### 3. Cluster Interpretation
+- Champions: Exclusive offers
+- Loyal: Encourage referrals
+- Potential Loyalists: Personalized upsell
+- At Risk: Win-back campaigns
+
+## 📦 Setup
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
